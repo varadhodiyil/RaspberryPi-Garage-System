@@ -34,9 +34,9 @@ The command below will take a photo and store it as a car.jpg file which is sent
 os.system('sudo fswebcam car.jpg') #If using webcam 
 os.system('sudo raspistill -o car.jpg') #If using RaspberryPi Camera 
 ```
-This command will run the openALPR cloud service and send the car.jpg file to detect the number plate and store the data into a **result.json** file which is located in **/Number Plate/result.json**. I have used the bash command. You can refer to the [Cloud API](http://doc.openalpr.com/cloud_api.html) and use the code sample you want. 
+This command will run the openALPR cloud service and send the car.jpg file to detect the number plate and store the data into a **result.json** file which is located in **/Number Plate/result.json**. I have used the bash command. You can refer to the [Cloud API](http://doc.openalpr.com/cloud_api.html) and use the code sample you want. You will have to use your private key which you will get after you resgister. Refer to [this](https://cloud.openalpr.com/cloudapi/) page to get your **Secret Key** under the **Cloud API Credentials**. 
 ```python
-os.system('sudo curl -X POST "https://api.openalpr.com/v2/recognize?secret_key=sk_be2a90aac4659f2a66e063f6&recognize_vehicle=1&country=ae&return_image=0&topn=10" -F image=@/home/pi/Desktop/Garage OCR System/car.jpg> ~/Desktop/Garage OCR System/Number Plate/result.json')
+os.system('sudo curl -X POST "https://api.openalpr.com/v2/recognize?secret_key=PUT YOUR SECRET KEY HERE&recognize_vehicle=1&country=ae&return_image=0&topn=10" -F image=@/home/pi/Desktop/Garage OCR System/car.jpg> ~/Desktop/Garage OCR System/Number Plate/result.json')
 ```
 
 
