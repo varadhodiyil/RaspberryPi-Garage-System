@@ -1,7 +1,7 @@
 # RaspberryPi-Garage-System
 This is a project to demonstrate the use of OCR (Optical Character Recognition) to identify number plates using image processing. 
 
-## Welcome to the RaspberryPi Garage System. In this program we will build a garage system using a RaspberryPi and an image processing library known as OpenALPR (Automatic License Plate Recognition) to detect the number plate using image processing. 
+## Welcome to the RaspberryPi Garage System. In this program we will build a garage system using a RaspberryPi and an image processing library known as OpenALPR (Automatic License Plate Recognition) to detect the number plate using image processing. You will have to register for the [openALPR cloud service](https://cloud.openalpr.com/). The registration is free and provides 2000 free detections evvery month.
 
 ### Things you will need: 
 * RaspberryPi (This demonstration uses a RaspberryPi 3 Model B+)
@@ -24,12 +24,19 @@ The GPIO pins used for the components are as follows:
 * Servo Motor - GPIO4
 * Ultrasonic Sensor : Trigger - GPIO8 , Echo - GPIO25
 
+## [OpenALPR Documentation](http://doc.openalpr.com/)
+## [OpenALPR Cloud API](http://doc.openalpr.com/cloud_api.html)
+
 #### Please create a Garage OCR System folder on the Desktop of the RaspberryPi and place all the files in that folder. Run the **garage.py** to start the program. Please refer to the program to understand the syntax below.
 
+The command below will take a photo and store it as a car.jpg file which is sent to the openALPR cloud service.
 ```python 
 os.system('sudo fswebcam car.jpg') #If using webcam 
 os.system('sudo raspistill -o car.jpg') #If using RaspberryPi Camera 
 ```
-
+This command will run the openALPR cloud service and send the car.jpg file to detect the number plate and store the data into a **result.json** file which is located in **/Number Plate/result.json**. I have used the bash command. You can refer to the [Cloud API](http://doc.openalpr.com/cloud_api.html) and use the code sample you want. 
+```python
+os.system('sudo curl -X POST "https://api.openalpr.com/v2/recognize?secret_key=sk_be2a90aac4659f2a66e063f6&recognize_vehicle=1&country=ae&return_image=0&topn=10" -F image=@/home/pi/Desktop/Garage OCR System/car.jpg> ~/Desktop/Garage OCR System/Number Plate/result.json')
+```
 
 
