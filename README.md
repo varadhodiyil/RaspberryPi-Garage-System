@@ -42,4 +42,4 @@ The initial distance is stored in a variable **total** which is 5 cm. The distan
 	total = 5 #Assigning starting distance for ultrasonic sensor
 		while total > 3.5:
 ```
-The rest of the command description are almost self explanatory and commented in the program. 
+The rest of the commands are almost self explanatory and the description is commented beside the command in the program. 
