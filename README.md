@@ -1,7 +1,6 @@
 # RaspberryPi-Garage-System
-This is a project to demonstrate the use of OCR (Optical Character Recognition) to identify number plates using image processing. 
 
-## Welcome to the RaspberryPi Garage System. In this program we will build a garage system using a RaspberryPi and an image processing library known as OpenALPR (Automatic License Plate Recognition) to detect the number plate using image processing. You will have to register for the [openALPR cloud service](https://cloud.openalpr.com/). The registration is free and provides 2000 free detections evvery month.
+## Welcome to the RaspberryPi Garage System. In this program we will build a garage system using a RaspberryPi and an image processing library known as OpenALPR (Automatic License Plate Recognition) to detect the number plate using image processing. You will have to register for the [openALPR cloud service](https://cloud.openalpr.com/). The registration is free and provides 2000 free detections every month.
 
 ### Things you will need: 
 * RaspberryPi (This demonstration uses a RaspberryPi 3 Model B+)
@@ -43,4 +42,4 @@ The initial distance is stored in a variable **total** which is 5 cm. The distan
 	total = 5 #Assigning starting distance for ultrasonic sensor
 		while total > 3.5:
 ```
-
+The rest of the command description are almost self explanatory and commented in the program. 
