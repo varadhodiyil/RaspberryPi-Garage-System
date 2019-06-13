@@ -17,7 +17,8 @@
 ### Programming Language : Python
 
 ## Let's Began!
-Make the connections to the RaspberryPi as shown in the following schematic diagram: ![schematic diagram](https://github.com/MoizSM/RaspberryPi-Garage-System/blob/master/Connection%20Schematic.PNG) (or make your own connection and modify in the program as you please). 
+Make the connections to the RaspberryPi as shown in the following schematic diagram: ![schematic diagram](https://github.com/MoizSM/RaspberryPi-Garage-System/blob/master/Connection%20Schematic.PNG)
+or make your own connection and modify in the program as you please. 
 The GPIO pins used for the components are as follows: 
 * PIR Motion Sensor - GPIO14
 * Servo Motor - GPIO4
