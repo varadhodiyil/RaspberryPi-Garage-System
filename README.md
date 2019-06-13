@@ -12,3 +12,8 @@ This is a project to demonstrate the use of OCR (Optical Character Recognition) 
 * Raspberry Pi Camera or Web Cam
 * A garage model (Which you can make out of a shoe box or something...)
 
+### Programming Language : Python
+
+## Let's Began!
+Make the connections to the RaspberryPi as shown in the following schematic diagram (or make your own connection and modify in the program as you please). 
+
