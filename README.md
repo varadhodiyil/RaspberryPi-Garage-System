@@ -24,7 +24,12 @@ The GPIO pins used for the components are as follows:
 * Servo Motor - GPIO4
 * Ultrasonic Sensor : Trigger - GPIO8 , Echo - GPIO25
 
-###
+#### Please create a Garage OCR System folder on the Desktop of the RaspberryPi and place all the files in that folder. Run the **garage.py** to start the program. Please refer to the program to understand the syntax below.
+
+```python 
+os.system('sudo fswebcam car.jpg') #If using webcam 
+os.system('sudo raspistill -o car.jpg') #If using RaspberryPi Camera 
+```
 
 
 
