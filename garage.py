@@ -121,9 +121,3 @@ detectMotion() #Call the function to activate the PIR motion sensor to detect if
 
 p.stop()
 GPIO.cleanup()
-
-
-
-
-
- 
