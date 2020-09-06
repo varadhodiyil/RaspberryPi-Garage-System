@@ -31,8 +31,8 @@ The GPIO pins used for the components are as follows:
 
 The command below will take a photo and store it as a car.jpg file which is sent to the openALPR cloud service.
 ```python 
-os.system('sudo fswebcam car.jpg') #If using webcam 
-os.system('sudo raspistill -o car.jpg') #If using RaspberryPi Camera 
+os.system('sudo fswebcam car.jpg') # If using webcam 
+os.system('sudo raspistill -o car.jpg') # If using RaspberryPi Camera 
 ```
 This command will run the openALPR cloud service and send the car.jpg file to detect the number plate and store the data into a **result.json** file which is located in **/Number Plate/result.json**. I have used the bash command. You can refer to the [Cloud API](http://doc.openalpr.com/cloud_api.html) and use the code sample you want. You will have to use your private key which you will get after you resgister. Refer to [this](https://cloud.openalpr.com/cloudapi/) page to get your **Secret Key** under the **Cloud API Credentials**. Put your secret key in the command below.
 ```python
@@ -41,6 +41,6 @@ os.system('sudo curl -X POST "https://api.openalpr.com/v2/recognize?secret_key=P
 The initial distance is stored in a variable **total** which is 5 cm. The distance between the ultrasonic sensor and the object in from of it is continously being detected and stored in the variable **total**. While the distance measured is greater than 3.5 cm the servo motor will not rotate i.e the door will not shut. You can modify these values as per your requirements in the syntax below
 ```python
 	total = 5 #Assigning starting distance for ultrasonic sensor
-		while total > 3.5:
+	while total > 3.5:
 ```
 The rest of the commands are almost self explanatory and the description is commented beside the command in the program. 
